@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b89e9b4648.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container grid">
+      <h1>Carrito<i class="fas fa-shopping-cart"></i></h1>
+      <hr />
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>imdbID</th>
+            <th>Película</th>
+            <th>Año</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - agregar películas!</th>
+          </tr>
+        </tfoot>
+      </table>
+      <hr />
+      <div class="row" id="cards"></div>
+
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total películas</th>
+        <td>10</td>
+        <td>
+          <button class="boton boton-2" id="clean-shoppingCart">
+            vaciar todo
+          </button>
+        </td>
+      </template>
+
+      <template id="template-shoppingCart">
+        <tr>
+          <th scope="row">id</th>
+          <td>Café</td>
+          <td>1</td>
+          <td>
+            <button class="boton boton-2">Eliminar</button>
+          </td>
+        </tr>
+      </template>
+
+      <template id="template-card">
+        <div class="card">
+          <img src="" alt="" class="card-img-top" />
+          <div class="card-body">
+            <h5>Titulo</h5>
+            <p>Año</p>
+            <button class="boton boton-1">Elegir</button>
+          </div>
+        </div>
+      </template>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
